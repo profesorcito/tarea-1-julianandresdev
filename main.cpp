@@ -35,13 +35,11 @@ double calcularTarifa(int horas, int dia) {
     //double totalTarifa = 0.0;
     // TODO: Implementar la lógica para calcular la tarifa base
     if (horas <= 1) {
-        cout << "Recibiste 6 creditos galacticos" << endl;
+        totalPagar = 6;
     } else if (horas > 1 && horas <= 3) {
-        totalPagar = horas * 4;
-        cout << "Recibiste " << totalPagar << " creditos galacticos" << endl;
+        totalPagar = 6 + (horas-1) * 4;
     } else if (horas > 3 && horas <= 5) {
-        totalPagar = horas * 3;
-        cout << "Recibiste " << totalPagar << " creditos galacticos" << endl;
+        totalPagar = 6 + (horas-1) * 3;
     } else {
         totalPagar = TARIFA_FIJA;
     }
