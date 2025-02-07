@@ -3,7 +3,7 @@
 using namespace std;
 
 // TODO: Implementar función para calcular la suma de los dígitos de un número
-int sumaDigitos(int numero) {
+bool sumaDigitos(int numero) {
     int primerDigito = numero / 10;  // Extraer primer digito
     int segundoDigito = numero % 10; // Extraer segundo digito
 
@@ -37,9 +37,9 @@ double calcularTarifa(int horas, int dia) {
     if (horas <= 1) {
         totalPagar = 6;
     } else if (horas > 1 && horas <= 3) {
-        totalPagar = 6 + (horas-1) * 4;
+        totalPagar = 6 + ((horas-1) * 4);
     } else if (horas > 3 && horas <= 5) {
-        totalPagar = 6 + (horas-1) * 3;
+        totalPagar = 6 + (2 * 4) + ((horas - 3) * 3);
     } else {
         totalPagar = TARIFA_FIJA;
     }
